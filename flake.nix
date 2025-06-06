@@ -31,10 +31,10 @@
         ];
       };
 
-      homeConfigurations.nefavel = home-manager.lib.homeManagerConfiguration {
+      homeConfigurations.itzkodee = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.${system};
         modules = [
-          ./home/nefavel/home.nix
+          ./home/itzkodee/home.nix
           inputs.stylix.homeModules.stylix
         ];
       };
