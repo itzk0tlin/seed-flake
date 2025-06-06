@@ -1,4 +1,4 @@
-# Potato flake
+# Seed flake
 Lightweight and easy to understand nixOS flake!
 
 ![potato_nix](https://github.com/ficache/potato-flake/blob/main/potato_nix.png?raw=true)
@@ -15,8 +15,8 @@ You can easily understand everything by reading manual :)
 ## How to install?
 
 1. Enter an environment with git. `nix-shell -p git`
-2. Clone this repo. `git clone https://github.com/ficache/potato-flake.git`
-3. Change directory. `cd potato-flake`
+2. Clone this repo. `git clone https://github.com/nefavel/seed-flake.git`
+3. Change directory. `cd seed-flake`
 4. Read comments in files, pay attention to /your-system/hardware-configuration.nix
 5. Build system! `sudo nixos-rebuild switch --flake .`
 6. Change password of user. `passwd admin` (admin is name of user)

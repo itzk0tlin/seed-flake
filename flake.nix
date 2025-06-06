@@ -3,6 +3,8 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
+
+    determinate.url = "https://flakehub.com/f/DeterminateSystems/determinate/*";
     
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -12,7 +14,7 @@
     stylix.url = "github:danth/stylix";
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }@inputs: 
+  outputs = { self, nixpkgs, home-manager, determinate, ... }@inputs: 
 
     let
       system = "x86_64-linux";
@@ -20,12 +22,12 @@
       # workstation is your hostname
       nixosConfigurations.workstation = nixpkgs.lib.nixosSystem {
         specialArgs = {
-          nixpkgs.config.allowUnfree = true;
           inherit inputs system;
         };
         modules = [
           ./systems/workstation/configuration.nix
           inputs.stylix.nixosModules.stylix
+          determinate.nixosModules.default
         ];
       };
 

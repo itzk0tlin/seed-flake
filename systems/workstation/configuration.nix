@@ -9,9 +9,17 @@
     ./default.nix
   ];
 
+  zapretPreset.enable = true;
+  gaming-tweaks.enable = true;
+  steam.enable = true;
+  autoCpuFreq.enable = true;
   biosBoot.enable = true;
   cinnamon.enable = true;
   xkbPreset.enable = true;
+
+  zramSwap.enable = true;
+
+  nixpkgs.config.allowUnfree = true;
 
   # Even tho flakes is experimental feature it's rock solid and you should use it.
   # https://wiki.nixos.org/wiki/Flakes
@@ -19,7 +27,7 @@
 
   time.timeZone = "Europe/Moscow"; # Change according to your time-zone
 
-  system.stateVersion = "24.05"; # Don't touch it. 
+  system.stateVersion = "25.05"; # Change it according to /etc/nixos/configuration.nix. 
   # Why? Check this out: https://wiki.nixos.org/wiki/FAQ/When_do_I_update_stateVersion
 
 
