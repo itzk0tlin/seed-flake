@@ -15,7 +15,7 @@ You can easily understand everything by reading manual :)
 ## How to install?
 
 1. Enter an environment with git. `nix-shell -p git`
-2. Clone this repo. `git clone https://github.com/nefavel/seed-flake.git`
+2. Clone this repo. `git clone https://github.com/itzkodee/seed-flake.git`
 3. Change directory. `cd seed-flake`
 4. Read comments in files, pay attention to /your-system/hardware-configuration.nix
 5. Build system! `sudo nixos-rebuild switch --flake .`

@@ -4,14 +4,14 @@
     # Bootloader.
     # To find more info check this out: https://nixos.wiki/wiki/Bootloader
     options = {
-        uefiLoader.enable =
+        uefiBoot.enable =
             lib.mkEnableOption "enable bootloader uefi mode";
         biosBoot.enable =
             lib.mkEnableOption "enable bootloader bios mode";
     };
     
     config = lib.mkMerge [ 
-        (lib.mkIf (config.uefiLoader.enable) {
+        (lib.mkIf (config.uefiBoot.enable) {
             # EFI systems: 
             boot.loader.systemd-boot.enable = true;
             boot.loader.efi.canTouchEfiVariables = true;

@@ -4,10 +4,12 @@
 
   imports = [
     ./packages.nix
+    ./git
     ../modules/default.nix
   ];
 
   vscode.enable = true;
+  stylix-preset.enable = true;
 
   home.username = "nefavel";
   home.homeDirectory = "/home/nefavel";

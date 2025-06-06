@@ -12,10 +12,13 @@
         ./optional/xkb-settings.nix
         ./optional/zapret.nix
         ./optional/steam.nix
+        ./optional/flatpak.nix
 
         ./optional/desktop-enviroments/cinnamon.nix
 
         ./optional/tweaks/autocpufreq.nix
         ./optional/tweaks/gaming-tweaks.nix
+
+        ./optional/hardware/battery-threshold.nix
     ];
 }

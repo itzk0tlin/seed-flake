@@ -10,10 +10,16 @@
   ];
 
   zapretPreset.enable = true;
+
   gaming-tweaks.enable = true;
   steam.enable = true;
+  flatpak-preset.enable = true;
+
   autoCpuFreq.enable = true;
   biosBoot.enable = true;
+  #uefiBoot.enable = true;
+  #battery-threshold.enable = true;
+
   cinnamon.enable = true;
   xkbPreset.enable = true;
 
