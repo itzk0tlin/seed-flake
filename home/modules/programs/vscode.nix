@@ -10,7 +10,7 @@
     {
       enable = true;
       package = pkgs.vscodium-fhs;
-      userSettings = 
+      profiles.default.userSettings = 
       {
         "terminal.integrated.defaultProfile.linux" = "null";
         "terminal.integrated.shell.linux" = "/run/current-system/sw/bin/bash";

@@ -4,7 +4,7 @@
 
   imports = [
     ./packages.nix
-    ./git
+    ./git.nix
     ../modules/default.nix
   ];
 

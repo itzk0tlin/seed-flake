@@ -16,14 +16,14 @@
   flatpak-preset.enable = true;
 
   autoCpuFreq.enable = true;
-  biosBoot.enable = true;
-  #uefiBoot.enable = true;
-  #battery-threshold.enable = true;
+  #biosBoot.enable = true;
+  uefiBoot.enable = true;
+  battery-threshold.enable = true;
 
   cinnamon.enable = true;
   xkbPreset.enable = true;
 
-  zramSwap.enable = true;
+  #zramSwap.enable = true;
 
   nixpkgs.config.allowUnfree = true;
 
@@ -37,7 +37,7 @@
   # Why? Check this out: https://wiki.nixos.org/wiki/FAQ/When_do_I_update_stateVersion
 
 
-  # services.gvfs.enable = true;  # This lines are for USB sticks if you need to mount one.
-  # services.udisks2.enable = true;
+  services.gvfs.enable = true;  # This lines are for USB sticks if you need to mount one.
+  services.udisks2.enable = true;
 
 }

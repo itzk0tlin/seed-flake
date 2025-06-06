@@ -12,7 +12,6 @@
     helix  # File editor
     nil    # Language server for nix
 
-    nh
     home-manager
     mc # file manager 
     
