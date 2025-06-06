@@ -4,8 +4,10 @@
 
   imports = [
     ./packages.nix
-    ./modules/bundle.nix
+    ../modules/default.nix
   ];
+
+  vscode.enable = true;
 
   home.username = "nefavel";
   home.homeDirectory = "/home/nefavel";

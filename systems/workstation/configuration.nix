@@ -5,17 +5,14 @@
 
 {
   imports = [ 
-      ./hardware-configuration.nix
-      ./minimal/bundle.nix # minimal bundle to run pc
-      ./your-packages.nix # Including packages in system :)
-      ./cinnamon.nix      
-      # ./optional/hyprland.nix # - Optional display manager!
-    ];
-
-  disabledModules = [
-    ./minimal/fonts.nix
-    # Here you can manage stuff that you want to disable.
+    ../modules/default.nix # minimal bundle to run pc
+    ./default.nix
   ];
+
+  biosBoot.enable = true;
+  cinnamon.enable = true;
+  xkbPreset.enable = true;
+
   # Even tho flakes is experimental feature it's rock solid and you should use it.
   # https://wiki.nixos.org/wiki/Flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];

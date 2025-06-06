@@ -4,12 +4,12 @@
     # There's a lot of ways to do it, but I use this because it's IMHO easier.
     # Check this out https://nixos.wiki/wiki/NixOS_modules#Imports 
     imports = [
-        ./fonts.nix
-        ./bootloader.nix
-        ./networking.nix
-        ./locales.nix
-        ./xkb-settings.nix
-        ./users.nix
-        ./garbage-collector.nix
+        ./minimal/bootloader.nix
+        ./minimal/locales.nix
+        ./minimal/garbage-collector.nix
+
+        ./optional/fonts.nix
+        ./optional/xkb-settings.nix
+        ./optional/cinnamon.nix
     ];
 }
