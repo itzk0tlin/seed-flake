@@ -3,7 +3,7 @@
     # Change name by changing 'admin' to 'joe' for example.
     users.users.itzkodee = {
         isNormalUser = true;
-        description = "Admin account. Default for potatoFlake";
+        description = "Welcome to workstation.";
         extraGroups = [ "networkmanager" "wheel" ]; # If something not working. Check this groups.
     };
 }

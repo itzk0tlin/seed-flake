@@ -7,6 +7,8 @@
     qbittorrent
     bottles
     libreoffice
+    gimp
+    obsidian
   ];
   
 }

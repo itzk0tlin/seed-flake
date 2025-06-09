@@ -16,7 +16,6 @@
   flatpak-preset.enable = true;
 
   autoCpuFreq.enable = true;
-  #biosBoot.enable = true;
   uefiBoot.enable = true;
   battery-threshold.enable = true;
 
