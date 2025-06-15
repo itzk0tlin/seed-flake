@@ -1,6 +1,7 @@
 { lib, config, ... }:
 
 {
+  # Auto-cpufreq works poorly on workstation - itzkodee 10.06.25
   options = {
     autoCpuFreq.enable =
       lib.mkEnableOption "enable auto-cpufreq module";

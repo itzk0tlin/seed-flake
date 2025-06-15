@@ -13,6 +13,7 @@
         ./optional/zapret.nix
         ./optional/steam.nix
         ./optional/flatpak.nix
+        ./optional/printing-support.nix
 
         ./optional/desktop-enviroments/cinnamon.nix
 

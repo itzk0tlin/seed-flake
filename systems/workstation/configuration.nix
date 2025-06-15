@@ -10,19 +10,25 @@
   ];
 
   zapretPreset.enable = true;
+  printing-support.enable = true;
 
   gaming-tweaks.enable = true;
   steam.enable = true;
   flatpak-preset.enable = true;
 
-  autoCpuFreq.enable = true;
+  #autoCpuFreq.enable = true;
   uefiBoot.enable = true;
   battery-threshold.enable = true;
 
   cinnamon.enable = true;
   xkbPreset.enable = true;
 
-  #zramSwap.enable = true;
+  services.syncthing.enable = true;
+  services.gvfs.enable = true;  # This lines are for USB sticks if you need to mount one.
+  services.udisks2.enable = true;
+
+  services.tlp.enable = true;
+  services.power-profiles-daemon.enable = false;
 
   nixpkgs.config.allowUnfree = true;
 
@@ -34,9 +40,4 @@
 
   system.stateVersion = "25.05"; # Change it according to /etc/nixos/configuration.nix. 
   # Why? Check this out: https://wiki.nixos.org/wiki/FAQ/When_do_I_update_stateVersion
-
-
-  services.gvfs.enable = true;  # This lines are for USB sticks if you need to mount one.
-  services.udisks2.enable = true;
-
 }

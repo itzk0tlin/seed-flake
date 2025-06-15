@@ -3,7 +3,7 @@
 {
   programs.git = {
     enable = true;
-    userName = "itzkodee";
+    userName = "itzk0tlin";
     userEmail = "orlovskymaksimik@yandex.ru";
     extraConfig = {
       credential.helper = [

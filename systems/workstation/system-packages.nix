@@ -13,6 +13,7 @@
     nil    # Language server for nix
 
     home-manager
+    nh
     mc # file manager 
     
     bastet # Tetris :)
