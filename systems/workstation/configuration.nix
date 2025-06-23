@@ -40,4 +40,9 @@
 
   system.stateVersion = "25.05"; # Change it according to /etc/nixos/configuration.nix. 
   # Why? Check this out: https://wiki.nixos.org/wiki/FAQ/When_do_I_update_stateVersion
+
+  networking.firewall = {
+    enable = true;
+    allowedTCPPorts = [ 25565 ];
+  };
 }

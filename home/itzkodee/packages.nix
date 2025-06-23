@@ -9,6 +9,9 @@
     libreoffice
     gimp
     obsidian
+    prismlauncher
+    telegram-desktop
+    blender
   ];
   
 }

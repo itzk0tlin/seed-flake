@@ -14,7 +14,7 @@
       openFirewall = true;
     };
     environment.systemPackages = with pkgs; [
-      kdePackages.print-manager
+      system-config-printer
     ];
   };
 }
