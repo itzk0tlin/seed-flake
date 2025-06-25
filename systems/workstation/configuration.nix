@@ -38,6 +38,13 @@
   nixpkgs.config.allowUnfree = true;
   programs.nix-ld.enable = true;
 
+  services.zerotierone = {
+    enable = true;
+    joinNetworks = [
+      "41d49af6c287fe2b"
+    ];
+  };
+
   # Even tho flakes is experimental feature it's rock solid and you should use it.
   # https://wiki.nixos.org/wiki/Flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];

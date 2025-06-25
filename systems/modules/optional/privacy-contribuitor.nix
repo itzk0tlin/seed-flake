@@ -1,4 +1,4 @@
-{ lib, config, ...}:
+{ lib, config, pkgs, ...}:
 {
   options = {
     privacy-contribuitor.enable = 
@@ -8,8 +8,8 @@
     containers.snowflake = {
       autoStart = true;
       ephemeral = true;
-      system.stateVersion = "25.05";
       config = {
+        system.stateVersion = "25.05";
         systemd.services.snowflake = {
           wantedBy = [ "multi-user.target" ];
           serviceConfig = {
@@ -44,24 +44,34 @@
         };
       };
     };
-    containers.i2pd = {
+    containers.i2pd-container = {
       autoStart = true;
-      system.stateVersion = "25.05";
-      networking.firewall.allowedTCPPorts = [
-        7070 # default web interface port
-        4447 # default socks proxy port
-        4444 # default http proxy port
-      ];
-      services.i2pd = {
-        enable = true;
-        address = "127.0.0.1";
-        upnp.enable = true;
-        proto = {
-          http.enable = true;
-          socksProxy.enable = true;
-          httpProxy.enable = true;
+      ephemeral = true;
+      config = {
+        system.stateVersion = "25.05";
+        networking.firewall.allowedTCPPorts = [
+          7070 # default web interface port
+          4447 # default socks proxy port
+          4444 # default http proxy port
+        ];
+        networking.firewall.allowedUDPPortRanges = [
+          {
+            from = 9000;
+            to = 31000;
+          }
+        ];
+        services.i2pd = {
+          enable = true;
+          address = "127.0.0.1";
+          upnp.enable = true;
+          proto = {
+            http.enable = true;
+            socksProxy.enable = true;
+            httpProxy.enable = true;
+          };
         };
       };
+      
     };
   };
   
