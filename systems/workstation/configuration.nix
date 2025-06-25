@@ -23,14 +23,20 @@
   cinnamon.enable = true;
   xkbPreset.enable = true;
 
-  services.syncthing.enable = true;
+  privacy-contribuitor.enable = true;
+
   services.gvfs.enable = true;  # This lines are for USB sticks if you need to mount one.
   services.udisks2.enable = true;
 
   services.tlp.enable = true;
   services.power-profiles-daemon.enable = false;
+  
+  networking.firewall.allowedTCPPorts = [
+    25565
+  ];
 
   nixpkgs.config.allowUnfree = true;
+  programs.nix-ld.enable = true;
 
   # Even tho flakes is experimental feature it's rock solid and you should use it.
   # https://wiki.nixos.org/wiki/Flakes
@@ -43,6 +49,5 @@
 
   networking.firewall = {
     enable = true;
-    allowedTCPPorts = [ 25565 ];
   };
 }

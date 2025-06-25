@@ -7,6 +7,7 @@
     ./git.nix
     ../modules/default.nix
   ];
+  services.syncthing.enable = true;
 
   vscode.enable = true;
   stylix-preset.enable = true;

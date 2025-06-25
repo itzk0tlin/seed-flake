@@ -14,6 +14,7 @@
         ./optional/steam.nix
         ./optional/flatpak.nix
         ./optional/printing-support.nix
+        ./optional/privacy-contribuitor.nix
 
         ./optional/desktop-enviroments/cinnamon.nix
 
