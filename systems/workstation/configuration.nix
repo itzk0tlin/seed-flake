@@ -24,7 +24,7 @@
   xkbPreset.enable = true;
 
   privacy-contribuitor.enable = true;
-
+  zramSwap.enable = true;
   services.gvfs.enable = true;  # This lines are for USB sticks if you need to mount one.
   services.udisks2.enable = true;
 

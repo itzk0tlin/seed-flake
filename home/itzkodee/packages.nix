@@ -12,6 +12,9 @@
     prismlauncher
     telegram-desktop
     blender
+    monero-gui
+    tor-browser
+    gajim
   ];
   
 }
