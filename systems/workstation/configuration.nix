@@ -28,12 +28,14 @@
   services.gvfs.enable = true;  # This lines are for USB sticks if you need to mount one.
   services.udisks2.enable = true;
 
-  services.tlp.enable = true;
+  services.tlp = {
+    enable = true;
+    settings = {
+        TLP_DEFAULT_MODE = "BAT";
+        TLP_PERSISTENT_DEFAULT = 1;
+    };
+  };
   services.power-profiles-daemon.enable = false;
-  
-  networking.firewall.allowedTCPPorts = [
-    25565
-  ];
 
   nixpkgs.config.allowUnfree = true;
   programs.nix-ld.enable = true;
@@ -42,6 +44,7 @@
     enable = true;
     joinNetworks = [
       "41d49af6c287fe2b"
+      "272f5eae16114dee"
     ];
   };
 

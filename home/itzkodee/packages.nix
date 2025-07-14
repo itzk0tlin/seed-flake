@@ -14,7 +14,8 @@
     blender
     monero-gui
     tor-browser
-    gajim
+    dino
+    redshift
   ];
   
 }

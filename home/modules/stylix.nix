@@ -9,7 +9,7 @@
   config = lib.mkIf config.stylix-preset.enable {
     stylix = {
       enable = true;
-      base16Scheme = "${pkgs.base16-schemes}/share/themes/eighties.yaml";
+      base16Scheme = "${pkgs.base16-schemes}/share/themes/onedark.yaml";
 
       cursor = {
         package = pkgs.oreo-cursors-plus;
