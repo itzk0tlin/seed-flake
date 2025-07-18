@@ -19,6 +19,11 @@
         };
       };
     };
+    # Steam and friends
+    environment.systemPackages = with pkgs; [
+      gamescope
+      gamemode
+    ];
   };
 
 }

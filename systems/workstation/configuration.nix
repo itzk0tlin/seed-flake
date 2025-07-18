@@ -35,6 +35,15 @@
         TLP_PERSISTENT_DEFAULT = 1;
     };
   };
+
+  programs.virt-manager.enable = true;
+
+  users.groups.libvirtd.members = ["itzkodee"];
+
+  virtualisation.libvirtd.enable = true;
+
+  virtualisation.spiceUSBRedirection.enable = true;
+
   services.power-profiles-daemon.enable = false;
 
   nixpkgs.config.allowUnfree = true;
